@@ -6,9 +6,9 @@ function findSmallestValue(args) {
   return Math.min(...args);
 }
 
-console.log(findSmallestValue([78, 56, 232, 12, 8]));
-console.log(findSmallestValue([78, 56, 232, 12, 228]));
-console.log(findSmallestValue([78, 56, 232, 412, 228]));
+// console.log(findSmallestValue([78, 56, 232, 12, 8]));
+// console.log(findSmallestValue([78, 56, 232, 12, 228]));
+// console.log(findSmallestValue([78, 56, 232, 412, 228]));
 
 // Loop
 
@@ -46,3 +46,14 @@ function check(a, x) {
     return false;
 }
 // less effective version since includes return true or false
+
+// sheep counter
+
+var countSheep = function (num) {
+  //your code here
+  let count = "";
+  for (let i = 0; i < num; i++) {
+    count += `${i + 1} sheep...`;
+  }
+  return count;
+}
