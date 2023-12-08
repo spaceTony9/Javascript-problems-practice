@@ -23,16 +23,16 @@
 //   return smallestNumber;
 // }
 
-// Sorting array and returning index 0 - the smallest value. Poor perfomance. 
+// Sorting array and returning index 0 - the smallest value. Poor perfomance.
 
 // function findSmallestValue(args) {
 //     // sorting values in ascending order.
-//     return args.sort((a, b) => a - b)[0]; 
+//     return args.sort((a, b) => a - b)[0];
 // }
 
-// find the value in the array. 
+// find the value in the array.
 
-// Method includes() 
+// Method includes()
 
 // function check(a, x) {
 //     return a.includes(x);
@@ -58,7 +58,7 @@
 //   return count;
 // }
 
-// iterate through every object in the array, and return the value of the correct key. Function takes key name as an argument 
+// iterate through every object in the array, and return the value of the correct key. Function takes key name as an argument
 
 // function getAllPropValues(propName) {
 //   const products = [
@@ -102,3 +102,111 @@
 // }
 
 // s.substr(startIndex, length): This function extracts a part of a string, starting from startIndex and going up to the specified length.
+
+// function openOrSenior(data) {
+//   // ...
+//   const resultArray = [];
+//   for (const keys of data) {
+//     if (keys[0] >= 55 && keys[1] > 7) {
+//       resultArray.push("Senior");
+//     } else {
+//       resultArray.push("Open");
+//     }
+//   }
+//     return resultArray;
+//   //   console.log(arguments);
+// }
+
+// function openOrSenior(data) {
+//   return data.map(([age, handicap]) => (age > 54 && handicap > 7 ? "Senior" : "Open"));
+// }
+
+// Map method iterates through every object in the array and applies the function to that element
+
+// console.log(
+//   openOrSenior([
+//     [45, 12],
+//     [55, 21],
+//     [19, -2],
+//     [104, 20],
+//   ])
+// );
+
+// receiving an array of numbers. pROGRAMM ITERATES FROM THE LOVEST TO HIGHEST AND SUMS THE VALUES INBETWEEN
+// (max - min + 1) * (min + max) / 2 computes the sum of integers within the range using a formula known as the arithmetic series sum formula, which is (count of integers) * (sum of first and last term) / 2.
+
+// function getSum(a, b) {
+//   //Good luck!
+//   const highestInt = Math.max(a, b);
+//     const smallestInt = Math.min(a, b);
+//     highestInt === smallestInt ? highestInt : smallestInt;
+//   const totalSum = [];
+//   for (let i = smallestInt; i < highestInt + 1; i++) {
+//       totalSum.push(i);
+//   }
+//     console.log(totalSum);
+//   return totalSum.reduce((a, b) => a + b);
+// }
+
+// // console.log(getSum(0, -1));
+// console.log(getSum(-1, -1));
+
+// function boolToWord(bool) {
+//     //...
+
+//   return (bool) ? "Yes" : "No";
+// }
+
+// console.log(boolToWord(true));
+
+// finds the 2 smallest integers in the array and sums them
+
+// function sumTwoSmallestNumbers(numbers) {
+//   //Code here
+//     let total = 0;
+//     for (let i = 0; i < 2; i++) {
+//         let smallestInt = Math.min(...numbers),
+//             indexOfsmall = numbers.indexOf(smallestInt);
+//         numbers.splice(indexOfsmall, 1);
+//         total += smallestInt;
+//     }
+//   return total;
+// }
+
+// sorts the array from smallest to highest number and sums 2 first
+
+// function sumTwoSmallestNumbers(numbers) {
+//     //Code here
+//     numbers = numbers.sort((a, b) => a - b);
+//   return numbers[0] + numbers[1];
+// }
+
+// console.log(sumTwoSmallestNumbers([5, 11, 12, 19, 22]));
+
+// code counts all the postitive integers and sums all negative. Return Array of positive counter and sum of negative.
+
+// function countPositivesSumNegatives(input) {
+//   // your code here
+//   if (input === null || input.length === 0) {
+//     return [];
+//   }
+//   let positiveCounter = 0,
+//     negativeSum = 0;
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] > 0) {
+//       positiveCounter++;
+//     } else if (input[i] < 0) {
+//       negativeSum += input[i];
+//     }
+//   }
+//   return [positiveCounter, negativeSum];
+// }
+
+// function countPositivesSumNegatives(input) {
+//     return input && input.length ? [input.filter((a) => a > 0).length, input.filter((b) => b < 0).reduce((a, b) => a + b, 0)] : [];
+// }
+// console.log(countPositivesSumNegatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]));
+// console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+// console.log(countPositivesSumNegatives([]));
+// console.log(countPositivesSumNegatives([null]));
+
