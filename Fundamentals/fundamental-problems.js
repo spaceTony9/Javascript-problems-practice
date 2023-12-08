@@ -82,3 +82,23 @@
 // console.log(getAllPropValues("price"));
 // console.log(getAllPropValues("quantity"));
 
+// funtion takes the string and returns middle character if its odd, when round returns 2 middle characters,
+// function getMiddle(s) {
+//   //Code goes here!
+//     let a = s.split("");
+//     const b = Math.round(a.length / 2 - 1);
+//     if (a.length % 2 === 0) {
+//         return String(a.slice(b, b + 2)).replaceAll(',', '');
+//     }
+//     return s[b];
+// }
+
+// console.log(getMiddle("test"));
+// console.log(getMiddle("testing"));
+
+// optimised version of the previous problem
+// function getMiddle(s) {
+//   return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+// }
+
+// s.substr(startIndex, length): This function extracts a part of a string, starting from startIndex and going up to the specified length.
