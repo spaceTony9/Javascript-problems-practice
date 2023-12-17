@@ -339,14 +339,16 @@
 
 // console.log(reverseSeq(5));
 
-function disemvowel(str) {
-  let finalStr = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] != "a", "e", "i", "o", "u") {
-      finalStr += str[i];
-    }
-  }
-  return finalStr;
-}
+// function disemvowel(str) {
+//   let finalStr = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] != "a", "e", "i", "o", "u") {
+//       finalStr += str[i];
+//     }
+//   }
+//   return finalStr;
+// }
 
-console.log(disemvowel("This website is for losers LOL!"));
+// console.log(disemvowel("This website is for losers LOL!"));
+
+console.log(typeof(NaN));
