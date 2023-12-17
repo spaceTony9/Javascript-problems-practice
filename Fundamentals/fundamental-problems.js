@@ -225,7 +225,7 @@
 
 // function isIsogram(str) {
 //     //...
-//     str = str.split('');
+//     str = str.toLowerCase().split('');
 //     for (let i = 0; i < str.length; i++) {
 //       for (let j = i + 1; j < str.length; j++) {
 //           if (str[i] === str[j]) {
@@ -267,34 +267,86 @@
 // // [12, 18, 3, 7, 14, 16]`
 
 
-const books = [
-  {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    rating: 8.38,
-  },
-  {
-    title: "Beside Still Waters",
-    author: "Robert Sheckley",
-    rating: 8.51,
-  },
-  {
-    title: "The Dream of a Ridiculous Man",
-    author: "Fyodor Dostoevsky",
-    rating: 7.75,
-  },
-  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
-  {
-    title: "The Dreams in the Witch House",
-    author: "Howard Lovecraft",
-    rating: 8.67,
-  },
-];
-const MIN_BOOK_RATING = 8;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
 
-const names = books
-  .filter((book) => book.rating > MIN_BOOK_RATING)
-  .map((book) => book.author)
-  .sort((a, b) => a.localeCompare(b));
+// const names = books
+//   .filter((book) => book.rating > MIN_BOOK_RATING)
+//   .map((book) => book.author)
+//   .sort((a, b) => a.localeCompare(b));
 
-  console.log(names);
+//   console.log(names);
+
+
+
+// function accum(s) {
+//   // your code
+//   s = s.toLowerCase().split("");
+//   const finalArray = [];
+//   for (let i = 0; i < s.length; i++) {
+//     let accumulatedValue = "";
+//     for (let j = 0; j <= i; j++) {
+//       accumulatedValue += s[i];
+//     }
+//     finalArray.push(accumulatedValue);
+//   }
+//   return finalArray.map((str) => str.charAt(0).toUpperCase() + str.slice(1)).join("-");
+// }
+
+// console.log(accum("ZpglnRxqenU"));
+// console.log(accum("abcd"));
+
+
+// const reverseSeq = (n) => {
+//   const array = [];
+//   for (let i = 1; i < n + 1; i++) {
+//     array.push(i);
+//   }
+//   return array.reverse();
+// };
+
+// Array(n): This creates a new array of length n. The Array() constructor is used to create an array with a specified length. The array will be empty initially, containing n empty slots.
+
+// .fill(0): The .fill(0) method populates each element of the array created in the previous step with the value 0. This ensures that the array is initially filled with zeros.
+
+// const reverseSeq = (n) => {
+//   return Array(n)
+//     .fill(0)
+//     .map((e, i) => n - i);
+// };
+
+// console.log(reverseSeq(5));
+
+function disemvowel(str) {
+  let finalStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] != "a", "e", "i", "o", "u") {
+      finalStr += str[i];
+    }
+  }
+  return finalStr;
+}
+
+console.log(disemvowel("This website is for losers LOL!"));
