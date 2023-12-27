@@ -248,7 +248,6 @@
 
 // console.log("hello world");
 
-
 // function changeEven(numbers, value) {
 //   const finalArray = [];
 //   for (let i = 0; i < numbers.length; i += 1) {
@@ -262,10 +261,8 @@
 //   return finalArray;
 // }
 
-
-// console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); 
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
 // // [12, 18, 3, 7, 14, 16]`
-
 
 // const books = [
 //   {
@@ -299,8 +296,6 @@
 
 //   console.log(names);
 
-
-
 // function accum(s) {
 //   // your code
 //   s = s.toLowerCase().split("");
@@ -317,7 +312,6 @@
 
 // console.log(accum("ZpglnRxqenU"));
 // console.log(accum("abcd"));
-
 
 // const reverseSeq = (n) => {
 //   const array = [];
@@ -351,4 +345,64 @@
 
 // console.log(disemvowel("This website is for losers LOL!"));
 
-console.log(typeof(NaN));
+// console.log(typeof(NaN));
+
+// function sortArray(array) {
+//     // Return a sorted array.
+//     const odd = array.filter((array) => array % 2).sort((a,b) => a - b);
+//     return array.map(array => (array % 2 ? odd.shift() : array));
+// }
+
+// function sortArray(array) {
+//   const odd = array.filter((x) => x % 2).sort((a, b) => a - b);
+//   return array.map((x) => (x % 2 ? odd.shift() : x));
+// }
+
+// console.log(sortArray([5, 3, 2, 8, 1, 4]));
+
+// function isValidWalk(walk) {
+//     //insert brilliant code here
+//     return walk.length === 10 ? true : false;
+// }
+
+function isValidWalk(walk) {
+  //insert brilliant code here
+  let n = 0,
+    s = 0,
+    w = 0,
+    e = 0;
+  //   console.log(secondHalf);
+  for (let i = 0; i < walk.length / 2; i++) {
+    if (walk[i] === "n") {
+      n++;
+    } else if (walk[i] === "w") {
+      w++;
+    } else if (walk[i] === "e") {
+      e++;
+    } else if (walk[i] === "s") {
+      s++;
+    }
+  }
+  const secondHalf = walk.splice(walk.length / 2);
+    for (let i = 0; i < secondHalf.length; i++) {
+      console.log(secondHalf[i]);
+    if (secondHalf[i] === "n") {
+      n--;
+    } else if (secondHalf[i] === "w") {
+      w--;
+    } else if (secondHalf[i] === "e") {
+      e--;
+    } else if (secondHalf[i] === "s") {
+      s--;
+    }
+  }
+  if (n === 0 && s === 0 && e === 0 && w === 0) {
+    return true;
+  }
+  console.log(n, s, w, e);
+  return false;
+}
+
+console.log(isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]));
+console.log(isValidWalk(['w']));
+// console.log(isValidWalk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]));
