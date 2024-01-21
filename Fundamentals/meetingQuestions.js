@@ -64,7 +64,7 @@
 
 // Object.create(obj);
 
-// lowest level prototype?
+// lowest level prototype? = Null
 
 // const obj = { 
 //     name: "Roger"
@@ -75,3 +75,62 @@
 // let array = [14, -4, 25, 8, 11];
 // let arrayCopy = [...array];
 // console.log(arrayCopy);
+
+// What is constructor() function in classes? What is initializing of an class instance?
+// class User {
+//   constructor() {
+//     // ...
+//   }
+// }
+
+// class User {
+//   constructor(name, email) {
+//     console.log(name, email);
+//   }
+// }
+
+// const roger = new User("Roger", "Roger@gmail.com");
+// console.log(roger);
+
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+// 	// Тіло класу ContentEditor
+// }
+// const admin = new User({email: "usermail@mail.com"})
+// console.log(admin.email);
+
+// const editor = new ContentEditor("mango@mail.com");
+// console.log(editor); // { #email: "mango@mail.com" }
+// console.log(editor.email); // "mango@mail.com"
+
+
+// Immutability we operate with new data not with data that we know. 
+// Object copying - spread operator. Nested objects when copying? 
+
+// For in cycle in Objects.
+
+// Wrapper objects.
+
+// Object entries
+
+// Objet key is always string or symbol. 
+
+// Object methods - 
+
+// Anonimous functions are arrow functions
+// Arrow function has no own this, no object arguments, con not be used as a constructor. 
